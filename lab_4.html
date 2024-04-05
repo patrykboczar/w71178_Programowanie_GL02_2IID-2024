@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script SRC="lab_4.js">
+
+        
+
+    </script>
+
+    <label>podaj a </label>
+    <input id="a" />
+    <label>podaj b </label>
+    <input id="b" />
+    <button onclick="test()">kliknij</button>
+    <script>
+        function test() {
+            console.log(document.getElementById('a'));
+            const a = document.getElementById('a').value;
+            const b = document.getElementById('b').value;
+            console.log(a,b)
+            const prostokat= new Prostokat(a, b);
+            console.log (prostokat.informacje()) 
+        }
+    </script>
+</body>
+</html>
