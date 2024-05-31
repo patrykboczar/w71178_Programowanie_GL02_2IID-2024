@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="lab_ostatni.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h2>Formularz Rejestracyjny</h2>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="firstName">Imię</label>
+                <input type="text" id="firstName" name="firstName" oninput="validateField('firstName')" required>
+                <span id="firstNameError">Imię jest wymagane</span>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Nazwisko</label>
+                <input type="text" id="lastName" name="lastName" oninput="validateField('lastName')" required>
+                <span id="lastNameError">Nazwisko jest wymagane</span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" oninput="validateField('email')" required>
+                <span id="emailError">Podaj prawidłowy adres email</span>
+            </div>
+            <div class="form-group">
+                <label for="password">Hasło</label>
+                <input type="password" id="password" name="password" oninput="validateField('password')" required>
+                <span id="passwordError">Hasło jest wymagane</span>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Powtórz hasło</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" oninput="validateField('confirmPassword')" required>
+                <span id="confirmPasswordError">Hasła nie są zgodne</span>
+            </div>
+            <button type="submit">Zapisz</button>
+        </form>
+    </div>
+</body>
+</html>
